@@ -1,114 +1,64 @@
-📧 Spam Email Detection Model
+# 📧 SMS Spam Detection (Machine Learning)
 
-This project is a Spam Email Detection machine learning model built using Python and scikit-learn.
-The model classifies emails as Spam or Not Spam (Ham) using Naive Bayes algorithms.
+A Machine Learning project that classifies SMS messages as Spam or Ham (Not Spam) using Natural Language Processing (NLP) and Naive Bayes algorithms.
 
-🚀 Features
+# 🚀 Features
 
-Text preprocessing using CountVectorizer
+Text preprocessing and cleaning
 
-Model training using:
+SMS text vectorization using CountVectorizer
+
+Spam classification using Naive Bayes
+
+Model pipeline for simplified workflow
+
+Achieves ~98% accuracy
+
+# 🧠 Model Used
 
 Multinomial Naive Bayes
 
 Bernoulli Naive Bayes
 
-Dataset split using train_test_split
+Text is converted into numerical features using:
 
-Simple and efficient spam classification
+CountVectorizer
+# 📊 Dataset
 
-🛠️ Technologies Used
+5570 SMS messages
 
-Python 🐍
+Two classes:
 
-scikit-learn
+ham → Normal message
 
-pandas
+spam → Unwanted message
 
-NumPy
+# ⚙️ Technologies
 
-📚 Libraries Used
-from sklearn.model_selection import train_test_split
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.naive_bayes import MultinomialNB, BernoulliNB
+Python
 
-📂 Project Structure
-spam-email-detection/
+Pandas
+
+Scikit-learn
+
+NLP (CountVectorizer)
+
+# 📈 Model Accuracy
+Model	Accuracy
+MultinomialNB	98.02%
+BernoulliNB	97.48%
+# 📂 Project Structure
+spam-detection
+```
+spam-detection/
 │
-├── data/                  # Dataset files
-├── spam_detector.ipynb    # Jupyter Notebook
-├── spam_detector.py       # Python script (if any)
-├── README.md              # Project documentation
-└── requirements.txt       # Required libraries
-
-⚙️ How It Works (Simple Explanation)
-
-Load Dataset
-Email text and labels (spam / ham)
-
-Text Vectorization
-Convert email text into numbers using CountVectorizer
-
-Split Data
-
-X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.2, random_state=42
-)
-
-
-Train Model
-
-MultinomialNB → best for word frequency
-
-BernoulliNB → best for binary features (word present or not)
-
-Predict & Evaluate
-The model predicts whether an email is Spam or Not Spam
-
-📊 Models Used
-🔹 Multinomial Naive Bayes
-
-Works well with word counts
-
-Commonly used for text classification
-
-🔹 Bernoulli Naive Bayes
-
-Works with binary features
-
-Checks whether a word exists or not
-
-▶️ How to Run the Project
+├── Spam.csv
+├── spam_detection.ipynb
+└── README.md
+```
+# ▶️ How to Run
 
 Clone the repository
-
-git clone https://github.com/your-username/spam-email-detection.git
-
-
-Install dependencies
-
-pip install -r requirements.txt
-
-
-Run the notebook or script
-
-jupyter notebook
-
-
-or
-
-python spam_detector.py
-
-✅ Output Example
-Email: "Congratulations! You won a free prize"
-Prediction: SPAM
-
-🎯 Future Improvements
-
-Use TF-IDF Vectorizer
-
-Try Logistic Regression
-
-Add confusion matrix & accuracy score
-
-Deploy as a web app
+```
+git clone https://github.com/your-username/spam-detection.git
+```
